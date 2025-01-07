@@ -1,0 +1,35 @@
+#sorted_dict = dict(sorted(char_totals.items(), key=lambda item: item[1], reverse=True))
+'''
+for key,value in dictionary.items():
+>>> can be used to iterate through the key and or values in the dictionary.
+
+sorted(iterable, *, key=none, reverse=True/False) >>>> can be used to sort. Returns a list, sorted b their ascii values
+key= >>> defaults to none, sorts by ascii value. Key can be used to change how it is sorted. lambda uses the indecies as the key:
+item: item[index] >>>> so it ist a dictionary 
+dict.items() >>> access key value pairs from a dictionary
+dict.key()  >>> Access Keys only from a dictionary
+dict.values() >>> access values only from a dictionary
+
+can combine with list(above) to list the tuples, or dict(above) to turn back into a dictionary
+
+'''    
+
+
+counts = { 
+    "a": 10,
+    "b": 8,
+    "c": 12,
+    "D": 3,
+    "e": 23
+  }
+
+sorted_counts = dict(sorted(counts.items(), key=lambda item: item[1], reverse=True))
+print(sorted_counts)
+
+returns: 
+{'e': 23, 'c': 12, 'a': 10, 'b': 8, 'D': 3}
+Is a dictionary of each of the keys and values in decending order of occurance.
+
+for i in sorted_counts:
+  print(f"There are {sorted_counts[i]} instances of {i}")
+#prints out each in decending order of occurance, on a new line
