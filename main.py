@@ -31,7 +31,7 @@ def report(file_name, num_words, char_totals):
 
   print(f"--- Begin report of {file_name} ---")
   print(f"{num_words} words fount in the document \n")
-  
+  #Need to sort the dir, and print each out into its own line. Break up dictionary.
   print("--- End report ---")
   return 
 
