@@ -31,7 +31,10 @@ def report(file_name, num_words, char_totals):
 
   print(f"--- Begin report of {file_name} ---")
   print(f"{num_words} words fount in the document \n")
-  #Need to sort the dir, and print each out into its own line. Break up dictionary.
+  sorted_counts = dict(sorted(char_totals.items(), key=lambda item: item[1], reverse=True))
+  for i in sorted_counts:
+    if i.isalpha():
+        print(f"There are {sorted_counts[i]} instances of {i}")
   print("--- End report ---")
   return 
 
